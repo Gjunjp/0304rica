@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N4 教學優化與晤談簡報</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            overflow: hidden; /* Prevent scrolling, act like a real presentation */
+        }
+        .slide {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+            height: auto !important;
+            min-height: 100%;
+        }
+        .slide.active {
+            display: flex;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Custom scrollbar for content areas if needed */
+        .content-area::-webkit-scrollbar {
+            width: 6px;
+        }
+        .content-area::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="h-screen w-screen flex flex-col justify-center items-center">
+
+    <!-- Presentation Container -->
+    <div class="relative w-full max-w-5xl h-[90vh] bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col border-t-8 border-blue-600">
+        
+        <!-- Header -->
+        <header class="flex items-center justify-between px-8 py-4 bg-gray-50 border-b border-gray-200 shrink-0">
+            <div class="text-xl font-bold text-blue-800 tracking-wide">教務視導與教學優化會議</div>
+            <div class="text-sm text-gray-500 font-medium">Page <span id="current-page">1</span> / 20</div>
+        </header>
+
+        <!-- Slides Area -->
+        <main class="flex-1 relative overflow-y-auto p-6 md:p-8 content-area">
+            
+            <!-- Slide 1 -->
+            <div class="slide active flex-col h-full" id="slide-1">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-blue-500 pl-4">今日晤談目的與核心主軸</h2>
+                <div class="text-lg text-gray-700 space-y-4">
+                    <p class="font-semibold text-blue-600 mb-2">晤談目的：</p>
+                    <p class="pl-4">協助老師了解近期學員回饋，凝聚教學共識，提升 N4 課程的教學品質與專業度。</p>
+                    <p class="font-semibold text-blue-600 mt-6 mb-2">核心主軸：</p>
+                    <ul class="list-disc pl-10 space-y-3">
+                        <li>學員正向回饋與課堂優勢肯定。</li>
+                        <li>班級經營與課堂互動時間分配優化。</li>
+                        <li>教學節奏、系統操作與課程進度掌握。</li>
+                        <li>教學技巧演練與日語專業度聚焦。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide flex-col h-full" id="slide-2">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-blue-500 pl-4">學員正向回饋與優勢</h2>
+                <div class="grid grid-cols-2 gap-6 h-full">
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">親切的互動態度</h3>
+                        <p class="text-gray-700 leading-relaxed">學員一致反映老師為人親切，非常願意與學生互動，營造了無壓力的開口環境，讓初學者不會感到害怕。</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-green-800 mb-3">具創意的教學方法</h3>
+                        <p class="text-gray-700 leading-relaxed">學員特別提及老師運用「歌曲」來帶入動詞概念，教學方式生動有趣，令人印象深刻。</p>
+                    </div>
+                    <div class="col-span-2 bg-gray-50 p-6 rounded-lg mt-2 border border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">總部與分校的肯定</h3>
+                        <p class="text-gray-700 leading-relaxed">老師的教學熱忱我們都有看見。今天的重點是希望能將這些優勢進一步放大，並針對細節進行微調，讓您的課程更加完美，同時減輕您備課的壓力。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide flex-col h-full" id="slide-3">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-blue-500 pl-4">課堂優化三大關鍵方向</h2>
+                <div class="space-y-6 mt-4">
+                    <div class="flex items-center p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <div class="flex-shrink-0 bg-blue-100 text-blue-600 w-12 h-12 flex items-center justify-center rounded-full text-xl font-bold">1</div>
+                        <div class="ml-4">
+                            <h4 class="text-xl font-bold text-gray-800">均等的互動與班級經營</h4>
+                            <p class="text-gray-600">解決過度聚焦單一話題的問題，提升全班參與感。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <div class="flex-shrink-0 bg-blue-100 text-blue-600 w-12 h-12 flex items-center justify-center rounded-full text-xl font-bold">2</div>
+                        <div class="ml-4">
+                            <h4 class="text-xl font-bold text-gray-800">精準的語速與內容轉譯</h4>
+                            <p class="text-gray-600">解決學員聽不懂、吸收不良的問題，確保教學資訊傳遞到位。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <div class="flex-shrink-0 bg-blue-100 text-blue-600 w-12 h-12 flex items-center justify-center rounded-full text-xl font-bold">3</div>
+                        <div class="ml-4">
+                            <h4 class="text-xl font-bold text-gray-800">系統操作與進度安定感</h4>
+                            <p class="text-gray-600">提升電子白板操作流暢度，緊扣教材進度，建立學員信任感。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide flex-col h-full" id="slide-4">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-purple-500 pl-4">議題探討(一)：班級經營與話題控制</h2>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-6">
+                    <h3 class="text-lg font-bold text-purple-700 mb-2">現狀觀察與學員感受</h3>
+                    <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                        <li>課堂氣氛活潑，但偶爾會出現與單一學員針對特定主題（如：動漫）討論過久的情況。</li>
+                        <li>部分學員反映感覺像在「聽朋友聊天」，導致其他同學失去參與日語互動的機會。</li>
+                    </ul>
+                </div>
+                <div class="bg-purple-50 rounded-lg p-6 border border-purple-100">
+                    <h3 class="text-xl font-bold text-purple-800 mb-4">雙向交流探討</h3>
+                    <p class="text-gray-800 text-lg mb-4">請問老師：當遇到學員對課外話題（如動漫、旅遊）很熱情一直發問時，您通常會如何收斂話題，把焦點拉回課本進度？</p>
+                    <p class="text-sm text-gray-500 italic">（請老師分享目前的做法與遇到的困難）</p>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide flex-col h-full" id="slide-5">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-purple-500 pl-4">具體建議(一)：降低無效閒聊，聚焦核心</h2>
+                <div class="space-y-6">
+                    <div class="p-5 bg-white shadow-sm border-l-4 border-red-400 rounded-r-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">時間控管黃金法則</h3>
+                        <p class="text-gray-700">課外延伸話題（如動漫討論、文化分享）每小時請控制在 <strong class="text-red-600">3-5 分鐘內</strong>，點到為止。</p>
+                    </div>
+                    <div class="p-5 bg-white shadow-sm border-l-4 border-red-400 rounded-r-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">避免過度延伸</h3>
+                        <p class="text-gray-700">N4 階段的學生詞彙量有限，過多的課外單字或口語用法補充，容易造成學員認知負荷過重，甚至記錯基礎文法。</p>
+                    </div>
+                    <div class="p-5 bg-white shadow-sm border-l-4 border-red-400 rounded-r-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">照顧全體權益</h3>
+                        <p class="text-gray-700">我們是一對多的課程，必須確保每一位繳費上課的學員都有<strong class="text-blue-600">均等的開口練習時間</strong>。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="slide flex-col h-full" id="slide-6">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-purple-500 pl-4">具體建議(二)：提高「高質量」的日語練習</h2>
+                <div class="text-lg text-gray-700 space-y-6">
+                    <p>相較於老師單方面分享或中文閒聊，我們更希望老師將時間投資在：</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-6 rounded shadow-sm text-center">
+                            <h4 class="font-bold text-gray-800">課本句型代換練習</h4>
+                            <p class="text-sm mt-2 text-gray-600">確保每位學生都能正確念出課本的目標句型。</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded shadow-sm text-center">
+                            <h4 class="font-bold text-gray-800">學員兩兩對話</h4>
+                            <p class="text-sm mt-2 text-gray-600">利用課本的 Q&A 進行學生間的互動，老師從旁糾音。</p>
+                        </div>
+                    </div>
+                    <div class="bg-yellow-50 p-4 rounded border border-yellow-200">
+                        <p class="text-yellow-800 font-semibold">教學小提醒：</p>
+                        <p class="text-yellow-700 text-sm mt-1">「減少閒聊」不是要老師變嚴肅，而是將「親切感」轉化為「鼓勵學生多用日文練習課本內容」的動力。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="slide flex-col h-full" id="slide-7">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-purple-500 pl-4">情境演練：如何優雅地打斷課外話題？</h2>
+                <div class="bg-white border-2 border-dashed border-gray-300 rounded-lg p-8 flex flex-col justify-center items-center h-full text-center">
+                    <p class="text-xl text-gray-800 font-bold mb-6">情境：學生 A 突然開始跟你大聊某部新番動漫的劇情...</p>
+                    <div class="w-full text-left space-y-4">
+                        <div class="bg-red-50 p-4 rounded text-red-800">
+                            <strong>錯誤示範：</strong> 順著學生的話一直聊下去，甚至開始補充動漫裡面的冷門單字，忽略了其他發呆的學生。
+                        </div>
+                        <div class="bg-green-50 p-4 rounded text-green-800">
+                            <strong>建議話術 (中/日)：</strong> 
+                            <br>「わあ、面白そうですね！不過為了不耽誤大家的進度，這個話題我們下課再聊喔！來，我們回到課本第Ｏ頁...」
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 8 -->
+            <div class="slide flex-col h-full" id="slide-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-blue-500 pl-4">議題探討(二)：精準的日語表達與時態正確性</h2>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-6">
+                    <h3 class="text-lg font-bold text-blue-700 mb-2">現狀觀察與學員感受</h3>
+                    <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                        <li>老師在課堂上積極使用日語互動，且後續都會補充中文意思，立意非常良好。</li>
+                        <li>但部分日常互動的日語「時態」偶爾會出現口誤。例如：稱讚學生時應使用過去式「<strong class="text-blue-600">よくできました</strong>」，卻不小心說成現在式的「<strong class="text-red-500">よくできます（ね）</strong>」。</li>
+                        <li><strong class="text-red-600">潛在影響：</strong>N4 學生正在建立時態觀念，老師的日語輸出若不夠精準，容易讓初學者感到混淆，甚至引起學員對講師專業度的疑慮。</li>
+                    </ul>
+                </div>
+                <div class="bg-blue-50 rounded-lg p-6 border border-blue-100">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">雙向交流探討</h3>
+                    <p class="text-gray-800 text-lg mb-4">請問老師：授課時是否因為要同時兼顧帶氣氛與操作系統，導致日文脫口而出時忽略了時態？針對這點，您覺得我們可以如何調整，來確保課堂上日文輸出的正確性？</p>
+                </div>
+            </div>
+
+            <!-- Slide 9 -->
+            <div class="slide flex-col h-full" id="slide-9">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-blue-500 pl-4">具體建議(三)：確保日語輸出的正確性與語速</h2>
+                <div class="space-y-6 mt-4">
+                    <div class="p-4 bg-white shadow rounded border-l-4 border-blue-400">
+                        <h4 class="font-bold text-blue-700 text-lg">1. 寧可慢，也要說「正確的日文」</h4>
+                        <p class="text-gray-700 mt-2">請刻意放慢語速。與其講了一長串又快但帶有文法瑕疵的日文，不如放慢速度，講出簡短、時態完全正確的標準句子，讓學生聽得懂也學得正確。</p>
+                    </div>
+                    <div class="p-4 bg-white shadow rounded border-l-4 border-blue-400">
+                        <h4 class="font-bold text-blue-700 text-lg">2. 減少不必要的日語「即興發揮」</h4>
+                        <p class="text-gray-700 mt-2">講授重點文法或給予學員反饋時，請使用最標準、教科書等級的說法。避免過度口語化或隨意變換句型，以免出現語病被敏銳的學員察覺。</p>
+                    </div>
+                    <div class="p-4 bg-white shadow rounded border-l-4 border-blue-400">
+                        <h4 class="font-bold text-blue-700 text-lg">3. 中文輔助的精準度基石</h4>
+                        <p class="text-gray-700 mt-2">雖然老師有補充中文的習慣，但若日文原文本身時態或文法有誤，中文翻譯再正確也會讓學生錯亂。因此「正確的日語原文」永遠是第一優先。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10 -->
+            <div class="slide flex-col h-full" id="slide-10">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-blue-500 pl-4">具體建議(四)：聽力練習的標準化操作</h2>
+                <div class="bg-gray-50 rounded-lg p-8 h-full">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">關於聽力播放的學員回饋</h3>
+                    <p class="text-lg text-gray-700 mb-6 text-center">學員提到：「課程的聽力是老師直接念給大家聽，不大會操作電腦系統。」</p>
+                    
+                    <div class="bg-white p-6 rounded shadow border-l-4 border-green-500">
+                        <h4 class="font-bold text-lg text-green-700 mb-2">標準作業流程 (SOP)：</h4>
+                        <ol class="list-decimal pl-6 space-y-3 text-gray-700">
+                            <li>聽力測驗務必 <strong class="text-blue-600">播放官方音檔</strong>，讓學生習慣母語人士的正常語速、語調與音質。</li>
+                            <li>老師親自朗讀可以作為「學生聽不懂時的輔助」，但絕對不能取代原始音檔的播放。</li>
+                            <li>今天我們也會確認老師在設備操作上的問題，協助排除。</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11 -->
+            <div class="slide flex-col h-full" id="slide-11">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-teal-500 pl-4">議題探討(三)：系統操作與進度安定感</h2>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm mb-6">
+                    <h3 class="text-lg font-bold text-teal-700 mb-2">現狀觀察與學員感受</h3>
+                    <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                        <li>學員反映老師對電腦白板不大會用，感覺很緊張。</li>
+                        <li>覺得老師對教材不熟，上課沒有照著課本進度，讓學生對進度不是很清楚。</li>
+                    </ul>
+                </div>
+                <div class="bg-teal-50 rounded-lg p-6 border border-teal-100">
+                    <h3 class="text-xl font-bold text-teal-800 mb-4">雙向交流探討</h3>
+                    <p class="text-gray-800 text-lg mb-4">請問老師：目前在操作電子白板或教學系統時，最常遇到什麼卡關的地方？對目前的教材編排是否有不習慣之處？</p>
+                </div>
+            </div>
+
+            <!-- Slide 12 -->
+            <div class="slide flex-col h-full" id="slide-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-teal-500 pl-4">具體建議(五)：電子白板的熟練度提升</h2>
+                <div class="grid grid-cols-2 gap-6 h-full">
+                    <div class="bg-white p-6 rounded shadow border border-gray-100 flex flex-col justify-center">
+                        <h4 class="font-bold text-xl text-gray-800 mb-4">基本操作要求</h4>
+                        <ul class="space-y-3 text-gray-600 list-disc pl-5">
+                            <li>流暢切換電子書與白板畫面。</li>
+                            <li>熟練使用畫筆標註重點（如動詞變化重點、助詞）。</li>
+                            <li>順利播放課本內建音檔。</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 text-white p-6 rounded shadow flex flex-col justify-center items-center text-center">
+                        <h4 class="font-bold text-xl mb-2">分校支援</h4>
+                        <p class="text-gray-300 text-sm">會後教務人員將會帶領老師實際演練一次操作，確保下一堂課能從容上陣。有任何硬體問題請立即反映。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 13 -->
+            <div class="slide flex-col h-full" id="slide-13">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-teal-500 pl-4">具體建議(六)：緊扣教材，建立學生信任感</h2>
+                <div class="p-6 bg-white shadow rounded border-t-4 border-teal-500 space-y-4">
+                    <h3 class="text-xl font-bold text-gray-800">為什麼要「照本宣科」？</h3>
+                    <p class="text-gray-700">許多老師經驗豐富，喜歡自己補充。但在補習班體系，學生花錢買了教材，若老師不照著上，學生會產生極大的<strong class="text-red-600">不安全感</strong>與抱怨（「那我買書幹嘛？」）。</p>
+                    <hr>
+                    <h4 class="font-bold text-teal-700 mt-2">執行重點：</h4>
+                    <ul class="list-decimal pl-6 space-y-2 text-gray-700">
+                        <li><strong class="text-black">明確告知頁數：</strong> 講解前務必說「請翻到第Ｏ頁」。</li>
+                        <li><strong class="text-black">以課本單字為主：</strong> 不要創造課本以外的新單字來舉例，學生會聽不懂也記不住。</li>
+                        <li><strong class="text-black">進度透明：</strong> 課前預告今天進度，下課前總結今天學了什麼。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 14 -->
+            <div class="slide flex-col h-full" id="slide-14">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-red-500 pl-4">教學專業度聚焦：N4 核心文法探討</h2>
+                <div class="bg-red-50 p-6 rounded-lg text-center flex flex-col justify-center items-center h-full border border-red-200">
+                    <h3 class="text-2xl font-bold text-red-800 mb-4">接下來進入：教學交流與演示時間</h3>
+                    <p class="text-gray-700 max-w-2xl text-lg">為了確保我們對 N4 課程的授課深度與講解方式有一致的共識，接下來想請老師用您平常上課的方式，簡單示範幾個 N4 核心文法的講解與引導。</p>
+                    <p class="text-sm text-gray-500 mt-4">（我們將觀察您的講解邏輯、板書重點與互動方式）</p>
+                </div>
+            </div>
+
+            <!-- Slide 15 -->
+            <div class="slide flex-col h-full" id="slide-15">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-red-500 pl-4">教學演示 (A)：動詞變化與時態引導</h2>
+                <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-sm h-full">
+                    <h3 class="text-xl font-bold text-red-700 mb-4">題目一：動詞使役受身形 (使役受動態)</h3>
+                    <p class="text-gray-700 mb-6">這是 N4 後期/N3 初期的魔王關卡。請老師針對台下（假設我們是 N4 學生），示範您如何花 <strong class="text-blue-600">3 分鐘</strong>以內，清晰講解以下內容：</p>
+                    
+                    <ul class="list-disc pl-8 space-y-4 text-gray-800 text-lg">
+                        <li><strong>變化規則：</strong> 請舉一個 I 類動詞（如：書く）和一個 II 類動詞（如：食べる），在白板上示範變化過程。</li>
+                        <li><strong>核心語感：</strong> 請用中文精準解釋「使役受身形」代表的語氣（被迫、無奈）。</li>
+                        <li><strong>情境例句：</strong> 請造一個課本等級的簡單例句並帶讀。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 16 -->
+            <div class="slide flex-col h-full" id="slide-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-red-500 pl-4">教學演示 (B)：易混淆文法解析</h2>
+                <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-sm h-full">
+                    <h3 class="text-xl font-bold text-red-700 mb-4">題目二：授受動詞的運用</h3>
+                    <p class="text-gray-700 mb-6">學生經常搞混「あげる / もらう / くれる」的視角。請老師示範如何講解以下三個句子的差異，並說明助詞的對應：</p>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg text-xl font-medium text-gray-800 space-y-4 border border-gray-200">
+                        <p>1. 私は 山田さんに 本を <strong class="text-blue-600">貸して あげました</strong>。</p>
+                        <p>2. 私は 山田さんに 本を <strong class="text-green-600">貸して もらいました</strong>。</p>
+                        <p>3. 山田さんは 私に 本を <strong class="text-red-600">貸して くれました</strong>。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 17 -->
+            <div class="slide flex-col h-full" id="slide-17">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-red-500 pl-4">教學演示 (C)：情境造句與糾錯</h2>
+                <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-sm h-full flex flex-col">
+                    <h3 class="text-xl font-bold text-red-700 mb-4">題目三：條件形（と、ば、たら、なら）</h3>
+                    <p class="text-gray-700 mb-4">當學生在上課時，說出了以下這個錯誤的句子，身為老師，您會如何<strong class="text-blue-600">糾正他</strong>，並且說明為什麼錯？</p>
+                    
+                    <div class="bg-red-50 p-6 rounded-lg border border-red-200 flex-1 flex flex-col justify-center items-center text-center">
+                        <p class="text-gray-500 text-sm mb-2">學生想表達：「如果明天去日本的話，我想買相機。」</p>
+                        <p class="text-2xl font-bold text-red-600 line-through">明日日本へ 行くと、カメラを 買いたいです。</p>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-4 text-center">（測驗重點：是否能清楚解釋「と」後方不能接意志、希望的文法限制，並給出正確的「たら」或「なら」用法）</p>
+                </div>
+            </div>
+
+            <!-- Slide 18 -->
+            <div class="slide flex-col h-full" id="slide-18">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-blue-500 pl-4">下一步行動方案 (Action Plan)</h2>
+                <div class="bg-white p-6 rounded-lg shadow border border-gray-200 h-full flex flex-col justify-center">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">從下一堂課開始，我們期望看到的改變：</h3>
+                    <div class="space-y-4 text-lg">
+                        <div class="flex items-center">
+                            <span><strong>閒聊減量：</strong> 課外話題嚴格控制在每小時 3 分鐘內。</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span><strong>回歸課本：</strong> 清楚宣告頁數，完全使用課本單字舉例。</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span><strong>中文輔助：</strong> 重要文法與指令，務必用中文確認學生理解。</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span><strong>標準聽力：</strong> 聽力測驗務必播放官方音檔。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 19 -->
+            <div class="slide flex-col h-full" id="slide-19">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-blue-500 pl-4">分校端（Ray）的協助與配合</h2>
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 h-full">
+                    <p class="text-lg text-gray-800 mb-4 font-semibold">為了協助老師順利調整，分校將提供以下支援：</p>
+                    <ul class="list-disc pl-8 space-y-4 text-gray-700 text-lg">
+                        <li><strong>協助聯繫與溝通：</strong> 由 Ray 擔任分校窗口，協助老師後續各項聯繫事宜。</li>
+                        <li><strong>學員意見追蹤：</strong> 分校將主動關心提出回饋的學員（如許同學、周同學），確認他們是否感受到教學節奏的改善。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 20 -->
+            <div class="slide flex-col h-full" id="slide-20">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-blue-500 pl-4">總結與 Q&A</h2>
+                <div class="bg-white border-2 border-gray-100 rounded-lg p-8 flex flex-col justify-center items-center h-full text-center shadow-sm">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-4">感謝老師的參與與配合</h3>
+                    <p class="text-gray-600 mb-8 max-w-2xl">我們非常看重老師親切、願意互動的特質。透過今天的微調，相信能讓您的專業度大幅提升，學員滿意度也會隨之成長。</p>
+                    
+                    <div class="bg-gray-50 w-full p-6 rounded-lg mt-4">
+                        <h4 class="font-bold text-gray-800 text-xl mb-2">Q & A 時間</h4>
+                        <p class="text-gray-500">老師針對今天的會議內容，或在排課、教材上有任何疑問，都歡迎現在提出。</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Footer / Controls -->
+        <footer class="bg-gray-800 text-white px-8 py-4 flex justify-between items-center rounded-b-lg shrink-0">
+            <button id="btn-prev" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+                &larr; 上一頁
+            </button>
+            <div class="flex space-x-2" id="dots-container">
+                <!-- Dots generated by JS -->
+            </div>
+            <button id="btn-next" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+                下一頁 &rarr;
+            </button>
+        </footer>
+    </div>
+
+    <!-- JavaScript for Presentation Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+            let currentSlide = 0;
+
+            const btnPrev = document.getElementById('btn-prev');
+            const btnNext = document.getElementById('btn-next');
+            const pageIndicator = document.getElementById('current-page');
+            const dotsContainer = document.getElementById('dots-container');
+
+            // Generate dots
+            for(let i=0; i<totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.className = `w-2 h-2 rounded-full ${i === 0 ? 'bg-blue-400' : 'bg-gray-500'}`;
+                dotsContainer.appendChild(dot);
+            }
+            const dots = dotsContainer.children;
+
+            function updateSlide() {
+                // Hide all slides
+                slides.forEach(s => {
+                    s.classList.remove('active');
+                    s.style.display = 'none';
+                });
+                
+                // Show current slide
+                slides[currentSlide].style.display = 'flex';
+                // Small delay to allow CSS animation to re-trigger
+                setTimeout(() => {
+                    slides[currentSlide].classList.add('active');
+                }, 10);
+
+                // Update text indicator
+                pageIndicator.textContent = currentSlide + 1;
+
+                // Update buttons
+                btnPrev.disabled = currentSlide === 0;
+                btnNext.disabled = currentSlide === totalSlides - 1;
+
+                // Update dots
+                Array.from(dots).forEach((dot, index) => {
+                    if(index === currentSlide) {
+                        dot.classList.remove('bg-gray-500');
+                        dot.classList.add('bg-blue-400');
+                    } else {
+                        dot.classList.remove('bg-blue-400');
+                        dot.classList.add('bg-gray-500');
+                    }
+                });
+            }
+
+            btnPrev.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateSlide();
+                }
+            });
+
+            btnNext.addEventListener('click', () => {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    updateSlide();
+                }
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight' || e.key === 'Space') {
+                    if (currentSlide < totalSlides - 1) {
+                        currentSlide++;
+                        updateSlide();
+                    }
+                } else if (e.key === 'ArrowLeft') {
+                    if (currentSlide > 0) {
+                        currentSlide--;
+                        updateSlide();
+                    }
+                }
+            });
+
+            // Initialize
+            updateSlide();
+        });
+    </script>
+</body>
+</html>
